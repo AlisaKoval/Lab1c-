@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <stdio.h>
-using namespace std;
+
 
 //Криворучко Ксения, ИВТ-2, 4 вариант
 
@@ -23,20 +23,20 @@ int main()
 	const size_t size = 120;
 	char dest[size] = "физико-технический";
 	char src[size] = " факультет";
-    size_t maxlen;
-	cout << "Введите количество символов, которые надо приписать к строке:";
-	cin >> maxlen;
-	cout << endl;
+    
+	printf( "Введите количество символов, которые надо приписать к строке:\n");
+	size_t maxlen = getchar();
+	printf("\n");
 
-	cout << "Использование личной функции strncat:" << endl;
+	printf( "Использование личной функции strncat:\n");
 	strncatMy(dest, src, maxlen);
-	cout <<dest<< endl;
-	cout << endl;
+	printf(dest);
+	printf("\n\n");
 
-	cout << "Использование встроенной функции strncat:" << endl;
+	printf("Использование встроенной функции strncat:\n");
 	strncat(dest, src, maxlen);
-	cout << dest << endl;
-	cout << endl;
+	printf( dest );
+	printf("\n\n");
 
 }
 
